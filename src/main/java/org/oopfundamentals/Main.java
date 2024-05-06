@@ -1,17 +1,22 @@
 package org.oopfundamentals;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CarBrand toyota = new CarBrand("Toyota", "Japan");
+        CarModel camry = new CarModel("Toyota", "Japan", "Camry", 2022);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        CarBrand bmw = new CarBrand("BMW", "Germany");
+        CarModel x5 = new CarModel("BMW", "Germany", "X5", 2023);
+
+
+        Car toyotaCamry = new Car(camry);
+        Car bmwX5 = new Car(x5);
+
+        toyotaCamry.start();
+        toyotaCamry.stop();
+
+        bmwX5.start();
+        bmwX5.stop();
     }
 }
